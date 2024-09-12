@@ -2,10 +2,9 @@
   "name": "weatherapp",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "start": "webpack serve --config webpack.config.js --mode development",
+    "build": "webpack --config webpack.config.js --mode production",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -13,7 +12,6 @@
     "@reduxjs/toolkit": "^2.2.7",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.7",
-    "postcss": "^8.4.45",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
@@ -26,12 +24,23 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "css-loader": "^7.1.2",
+    "dotenv-webpack": "^8.1.0",
     "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
+    "html-webpack-plugin": "^5.6.0",
+    "postcss": "^8.4.45",
+    "postcss-loader": "7.0.2",
+    "postcss-preset-env": "^10.0.3",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }

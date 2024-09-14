@@ -20,8 +20,8 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full h-screen flex">
-      <div className="w-[25%] flex flex-col items-center py-8">
+    <div className="w-full h-screen md:flex">
+      <div className="md:w-[25%] flex flex-col items-center py-8">
         <SearchBar apiKey={apiKey} query={query} setQuery={setQuery} />
         {current && location && !isLoading && (
           <div className="flex flex-col items-center w-4/5 gap-4 mt-8">
@@ -40,8 +40,8 @@ function App() {
           </div>
         )}
       </div>
-      <div className="w-[75%] bg-[#f2f2f2] flex flex-col items-center overflow-y-auto py-8">
-        <div className="flex items-center self-start mb-8 ml-8">
+      <div className="md:w-[75%] bg-[#f2f2f2] flex flex-col items-center overflow-y-auto py-8">
+        <div className="flex items-center md:self-start self-center mb-8 md:ml-8">
           <div
             className={`flex items-center justify-center px-4 py-2 ${
               option === 'today' && 'border-b-[2px] border-black'
@@ -62,17 +62,17 @@ function App() {
             <ClipLoader size={50} color="black" />
           </div>
         )}
-        <div className="flex flex-wrap w-[90%] gap-4">
+        <div className="flex flex-wrap md:justify-start justify-center md:w-[94%] w-[85%] gap-4 animate-fade-down animate-delay-300 animate-once">
           {option === 'today' &&
             forecast &&
             !isLoading &&
             forecast.hour.map((hour: IHour) => (
-              <div className="flex flex-col items-center rounded-md bg-white w-32 h-32 gap-2 p-2">
+              <div className="flex flex-col items-center rounded-md bg-white md:w-32 w-36 h-32 gap-2 p-2">
                 <h2>{hour.time.split(' ')[1]}</h2>
                 <img src={hour.condition.icon} width={50} height={50} />
-                <h2 className="text-center">
-                  {hour.condition.text.length > 10
-                    ? `${hour.condition.text.slice(0, 11)}...`
+                <h2 className="text-center text-sm">
+                  {hour.condition.text.length > 14
+                    ? `${hour.condition.text.slice(0, 12)}...`
                     : hour.condition.text}
                 </h2>
               </div>
@@ -80,7 +80,7 @@ function App() {
           {option === 'future' &&
             !isLoading &&
             days.map((day: IDay) => (
-              <div className="flex flex-col items-center rounded-md bg-white w-32 h-32 gap-2 p-2">
+              <div className="flex flex-col items-center rounded-md bg-white md:w-32 w-36 h-32 gap-2 p-2">
                 <h2>{day.date}</h2>
                 <img src={day.day.condition.icon} width={50} height={50} />
                 <h2 className="text-center">

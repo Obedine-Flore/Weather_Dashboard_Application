@@ -5,22 +5,41 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node build/index.js"
+    "build": "webpack",
+    "start": "webpack serve --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "^7.1.2",
+    "css-loader": "^5.0.0",
+    "dotenv-webpack": "^8.1.0",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.5.4",
+    "vm-browserify": "^1.1.2",
     "webpack": "^5.94.0",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
+    "assert": "^2.1.0",
+    "axios": "^1.7.7",
+    "buffer": "^6.0.3",
+    "crypto": "^1.0.1",
+    "crypto-browserify": "^3.12.0",
+    "dotenv": "^16.4.5",
+    "os": "^0.1.2",
+    "os-browserify": "^0.3.0",
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
     "react-accessible-accordion": "^5.0.0",
-    "react-select-async-paginate": "^0.7.5"
+    "react-select-async-paginate": "^0.7.5",
+    "stream": "^0.0.3",
+    "stream-browserify": "^3.0.0",
+    "url": "^0.11.4",
+    "util": "^0.12.5"
   }
 }

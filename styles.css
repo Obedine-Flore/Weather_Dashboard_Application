@@ -1,0 +1,175 @@
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the weather dashboard */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Styling for the search section */
+#search-section {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+#enter-city {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+}
+
+button {
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    background-color: #0277bd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #01579b;
+}
+
+/* Weather display section */
+#today-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #81d4fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+#city-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+#current-pic {
+    width: 120px;
+    height: 120px;
+}
+
+.details p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+/* Styling for the 5-day forecast */
+#fiveday-header {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    justify-items: center;
+}
+
+.forecast {
+    background-color: #b3e5fc;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-date {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Search history styling */
+#history {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+#history input {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.badge {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    color: white;
+    border-radius: 4px;
+}
+
+.badge-success {
+    background-color: #28a745;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+}
+
+/* Search history styling */
+#history {
+    margin-top: 1rem;
+    padding: 1rem; /* Padding inside the container */
+    background-color: #e3f2fd; /* Light blue background for contrast */
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Space between grid items */
+}
+
+/* Style history items */
+#history input {
+    padding: 0.5rem; /* Padding inside the input elements */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+#history input:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#history input:focus {
+    outline: none;
+    border-color: rgba(228, 233, 238, 0.5); /* Highlight border color on focus */
+    box-shadow: 0px 0px 4px rgba(228, 233, 238, 0.5);
+}

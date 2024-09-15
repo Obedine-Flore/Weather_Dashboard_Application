@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        
+        <!-- Search section -->
+        <div id="search-section">
+            <input type="text" id="enter-city" placeholder="Enter city" />
+            <button id="search-button">Search</button>
+            <button id="clear-history">Clear History</button>
+        </div>
+
+        <!-- Weather Display -->
+        <div id="today-weather" class="d-none">
+            <h2 id="city-name"></h2>
+            <img id="current-pic" alt="Weather icon" />
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+            <p id="UV-index"></p>
+        </div>
+
+        <!-- 5-day forecast -->
+        <h2 id="fiveday-header" class="d-none">5-Day Forecast</h2>
+        <div class="forecast-container">
+            <div class="forecast"></div>
+            <div class="forecast"></div>
+            <div class="forecast"></div>
+            <div class="forecast"></div>
+            <div class="forecast"></div>
+        </div>
+
+        <!-- Search History -->
+        <div id="history">
+            <h2>Search History</h2>
+        </div>
+    </div>
+
+    <!-- Your bundled JavaScript/TypeScript will go here -->
+    <script src="bundle.js"></script>
+</body>
+</html>

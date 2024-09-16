@@ -1,5 +1,5 @@
 import { IoSearch } from "react-icons/io5";
-import { fetchWeatherData } from "../redux/weatherSlice";
+import { fetchWeatherData } from "../services/WeatherService";
 import { useAppDispatch } from "../redux/hooks";
 
 

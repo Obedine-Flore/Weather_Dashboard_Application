@@ -4,7 +4,7 @@ import { IoLocationSharp } from 'react-icons/io5';
 import ClipLoader from 'react-spinners/ClipLoader';
 import { IDay, IHour } from './types/Weather';
 import { useAppDispatch, useAppSelector } from './redux/hooks';
-import { fetchWeatherData } from './redux/weatherSlice';
+import { fetchWeatherData } from './services/WeatherService';
 import SearchBar from './components/SearchBar';
 
 function App() {
@@ -83,7 +83,7 @@ function App() {
               <div className="flex flex-col items-center rounded-md bg-white md:w-32 w-36 h-32 gap-2 p-2">
                 <h2>{day.date}</h2>
                 <img src={day.day.condition.icon} width={50} height={50} />
-                <h2 className="text-center">
+                <h2 className="text-center text-sm">
                   {day.day.condition.text.length > 10
                     ? `${day.day.condition.text.slice(0, 11)}...`
                     : day.day.condition.text}

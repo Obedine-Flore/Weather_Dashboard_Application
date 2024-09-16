@@ -1,23 +1,7 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from '../services/api'
-import { InitialState, IQuery, WeatherData } from "../types/Weather";
+import { createSlice } from "@reduxjs/toolkit";
+import { InitialState } from "../types/Weather";
+import { fetchWeatherData } from "../services/WeatherService";
 
-
-export const fetchWeatherData = createAsyncThunk<WeatherData, IQuery>('weather/fetchData', async({key, query}, thunkAPI) => {
-    try{
-        const response = await axios.get("", {
-            params:{
-                key,
-                query,
-                days: '7'
-            }
-        })
-
-        return response.data
-    }catch(err){
-        return thunkAPI.rejectWithValue(err)
-    }
-})
 
 const weatherSlice = createSlice({
     name: 'weather',
